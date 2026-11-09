@@ -1,0 +1,23 @@
+Import the original java banking with all of its classes and such so it is had here
+
+Admin class - 
+Admin
+menu
+getReport
+
+Bank -
+admin:admin
+customers: arrayList
+
+Bank
+main()void
+loadSampleCustomers(): void
+saveCustomers() void
+fullCustomerReport
+addUser
+applyInterst
+loginasCustomer
+menu
+start
+startAdmin
+
