@@ -1,0 +1,117 @@
+class admin extends user
+define bank bank 
+admin(username pin bank)
+set username = username
+set pin = pin 
+set this bank = bank 
+
+method menu()
+exit view vustomer add customer apply savings interest
+
+get users choice
+show them their choice
+
+view customers()
+for customer in bank.getCustomers()
+show customer.get report
+
+add customer
+get username
+get pin 
+create new Customer(username pin)
+bank.addcustomer(customer)
+
+applySavingsInterst()
+for customer in bank.getCustomer()
+customer.savings.appluInterest()
+
+get report
+return "Admin: " + username
+
+start
+set keepGoing = true
+while keepGoing == true
+set choice = menu()
+if 0 false
+if 1 view customer
+if 2 add customer
+if 3 applySavingsInterest
+else invalid
+
+
+
+bank class
+class bank implements hasMenu
+admin as admin
+customerList as list of customer
+
+bank()
+admin object
+customerList
+load customers
+call start
+save customers
+
+menu
+0 to exit 1 to login 2 to login as customer
+get users choice
+show user choice
+
+start 
+keepGoing = true
+while keepgoing == true
+set choice = menu
+if choice == 0
+keepgoing = false
+if 1 login as admin 
+if successful 
+call adminStart()
+if 2 login as customer
+call customerLogin
+
+adminStart()
+while admin menu running
+set choice = admin.menu()
+if choice == 0 
+exit
+if 1 fullCustomerReport
+if 2 call adduser
+if 3 apply interst 
+else invalid choice
+
+fullCustomerReport
+for every cutstomer in customerList
+show customer.getReport
+
+addUser()
+getUsername
+Get pin 
+new customer
+add customer to customerList
+
+applyInterst()
+for every customer in customerList
+apply interest to customers savigns account
+
+customerLogin 
+get username
+get pin 
+set currentCustomer = null
+for each customer in list
+if login is successfull
+set current customer = customer
+call current customer start
+
+if current customer == null
+show login unsuccessful 
+
+load sample customers
+create sample customer
+add sample customer to customer list
+
+save customers
+save customer list using serialization 
+
+load customers
+load customerList using serialization 
+uf
